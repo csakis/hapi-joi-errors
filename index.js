@@ -28,15 +28,27 @@ const start = async () => {
         layout:true      
 
     });
-
+    server.route({
+        method: 'get',
+        path: '/',
+        handler: (request, h) => {
+            return h.view('index', {title: "Index"})
+        }
+    });
+    server.route({
+        method: 'GET',
+        path: '/login',
+        handler: (request, h) => {
+            return h.view('login')
+        }
+    });
     server.route({
         method: 'POST',
         path: '/login',
         handler: (request, h) => {
-            return h.view('/login')
+            return h.view('login')
         }
     });
-
     server.route({
         method: 'GET',
         path: '/{param*}',
@@ -48,7 +60,6 @@ const start = async () => {
             }
         }
     });
-
     await server.start();
     console.log("Hapi is running on port", server.info.uri);
 };
