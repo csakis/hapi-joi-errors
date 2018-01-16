@@ -1,0 +1,30 @@
+{
+  "name": "hapi-joi-errors",
+  "version": "1.0.0",
+  "description": "A small project helping to deal with joi errors on the front-end with custom error messages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csakis/hapi-joi-errors.git"
+  },
+  "keywords": [
+    "hapi",
+    "joi",
+    "errors"
+  ],
+  "author": "Csaba Kiss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csakis/hapi-joi-errors/issues"
+  },
+  "homepage": "https://github.com/csakis/hapi-joi-errors#readme",
+  "dependencies": {
+    "hapi": "^17.2.0",
+    "inert": "^5.1.0",
+    "joi": "^13.1.0",
+    "vision": "^5.3.1"
+  }
+}
