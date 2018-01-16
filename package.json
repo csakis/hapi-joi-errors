@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/csakis/hapi-joi-errors#readme",
   "dependencies": {
+    "handlebars": "^4.0.11",
     "hapi": "^17.2.0",
     "inert": "^5.1.0",
     "joi": "^13.1.0",
