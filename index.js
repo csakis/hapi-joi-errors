@@ -31,12 +31,6 @@ const start = async() => {
             const isNameEmpty = _.where(response.details, {message: '"username" is not allowed to be empty'}).length > 0;
             const isNameNotEmail = _.where(response.details, {message: '"username" must be a valid email'}).length > 0;
             const isPasswordEmpty = _.where(response.details, {message: '"password" is not allowed to be empty'}).length > 0;
-
-            // console.log('details: ', response.details);
-            console.log('isNameEmpty: ', isNameEmpty);
-            console.log('isNotEmail: ', isNameNotEmail);
-            console.log('isPWEmpty: ', isPasswordEmpty);
-
             return h.view('login', {
                 error: {
                     isNameError: isNameEmpty || isNameNotEmail,
