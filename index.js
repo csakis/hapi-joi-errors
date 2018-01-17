@@ -28,6 +28,7 @@ const start = async() => {
         }
         //let's handle login POST error
         if (request.route.path == '/login' && request.route.method == 'post') {
+            //this is not very elegant, but I struggled to make the error checking less convoluted.
             const isNameEmpty = _.where(response.details, {message: '"username" is not allowed to be empty'}).length > 0;
             const isNameNotEmail = _.where(response.details, {message: '"username" must be a valid email'}).length > 0;
             const isPasswordEmpty = _.where(response.details, {message: '"password" is not allowed to be empty'}).length > 0;
