@@ -1,14 +1,18 @@
-<form action='/login' method="POST">
+<form action='' method="POST">
     <div class="form">
         <div class="col">
             <label class="" for="username">User Name</label>
-            <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Enter email">
+            <input type="text" class="form-control {{#if error.isNameError}}is-invalid {{/if}}" id="username" name="username" aria-describedby="emailHelp" placeholder="Enter email">
+           {{#if error.isNameEmpty}}
             <small class="invalid-feedback">The user name field is required</small>
+            {{/if}}
+            {{#if error.isNameNotEmail}}
             <small class="invalid-feedback">The user name needs to be a valid email address</small>
+            {{/if}}
         </div>
         <div class="col" style="margin-top:10px;">
             <label for="password">Password</label>
-            <input type="password" class='form-control' id="password" name="password" placeholder="Password">
+            <input type="password" class="form-control {{#if error.isPasswordEmpty}}is-invalid {{/if}}" id="password" name="password" placeholder="Password">
             <small class="invalid-feedback">The password field is required</small>
             <button type="submit" style="margin-top:20px;" class="btn btn-primary">Login</button>
         </div>
