@@ -69,7 +69,7 @@ const start = async() => {
         method: 'GET',
         path: '/login',
         handler: (request, h) => {
-            return h.view('login')
+            return h.view('login', {title: "login"})
         }
     });
     server.route({
@@ -91,7 +91,7 @@ const start = async() => {
             }
         },
         handler: (request, h) => {
-            return h.view('login')
+            return h.view('login', {title: "login"})
         }
     });
     server.route({
